@@ -9,7 +9,7 @@ word = list(input("Enter the Letter : ").lower())
 success_count = len(word)
 failed = len(word)
 guess_word = []
-print("-------------------------------------------------------")
+print("-"*50)
 
 #clearing the screen
 def clear():
@@ -33,7 +33,7 @@ for ch in word:
     guess_word.append("_")
 print(f"The word has {len(word)} letters.")
 print(guess_word)
-print("-------------------------------------------------------")
+print("-"*50)
 
 #game starts
 while guess_no != 0:
@@ -54,9 +54,9 @@ while guess_no != 0:
         # failed -= 1
         if ch in guess_word and ch in guess:
             sleep(1)
-            print("-------------------------------------------------------")
+            print("-" * 50)
             print(f"Pressed Word '{ch}' is already entered. TRY ANOTHER !!!!!!!")
-            print("-------------------------------------------------------")
+            print("-"*50)
             continue
         sleep(1)
         print(f"Pressed Word '{ch}' is not  present in the given word.")
